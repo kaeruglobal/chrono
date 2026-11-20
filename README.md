@@ -47,7 +47,7 @@
 - **Fork に載せる変更は、上の一覧の取り込みだけ**。新しい機能・独自の変更は足さない。
 - 上流の新しい安全の直しは、毎週の見回し（RanaDeviceManager の `reports/ranadm-chrono-alternative/WATCH.md`）で見て、選んで取り込み、新しいタグ（`-kaeru.N+1`）と新しい SHA にする。
 - この Fork では GitHub Actions を有効にしていない（Fork 先の CI を回さない）。試験は手元（コンテナ）で `cargo test` を流して確かめる。
-- 書き込み権限は kaeruglobal の管理者のみ。
+- 書き込み権限は kaeruglobal の管理者（admin）のみ。それ以外の org メンバーは read（org の既定が read）。
 
 ---
 
