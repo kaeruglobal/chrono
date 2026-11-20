@@ -343,7 +343,7 @@ impl defmt::Format for WeekdaySet {
             0x1 & (self.0 >> 3),
             0x1 & (self.0 >> 2),
             0x1 & (self.0 >> 1),
-            0x1 & (self.0 >> 0),
+            0x1 & self.0,
         )
     }
 }

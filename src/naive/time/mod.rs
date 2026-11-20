@@ -1543,7 +1543,7 @@ impl defmt::Format for NaiveTime {
         defmt::write!(fmt, "{:02}:{:02}:{:02}", hour, min, sec);
 
         if nano == 0 {
-            return;
+            // no fractional part
         } else if nano % 1_000_000 == 0 {
             defmt::write!(fmt, ".{:03}", nano / 1_000_000);
         } else if nano % 1_000 == 0 {
