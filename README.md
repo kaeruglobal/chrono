@@ -28,6 +28,8 @@
 上流で未マージの PR 1 件:
 - `chronotope/chrono#1812`（TZif のヘッダーの長さ計算を `checked_mul` に。壊れた入力で 32 ビット環境の panic を防ぐ）。変更が小さく、テスト付き、挙動の変化は「panic → エラー」だけ。
 
+**この Fork 独自の変更（2 行、挙動の変化なし）**: rustc/clippy 1.94 で `clippy -D warnings` が落ちる 2 か所（`src/naive/time/mod.rs` の `needless_return`、`src/weekday_set.rs` の `identity_op`）を直した。上流のコミットではない。
+
 **取り込まなかったもの**: CI・依存の更新だけのコミット（checkout/setup-node の更新、wasm の cfg、CI の予定実行）。
 挙動を変える未マージ PR（#1811 `From<SystemTime>` の飽和、#1801 オフセット秒の解析、#1813 高速な整形、他の機能追加）は、上流の判断が出ていないので入れていない。
 バージョンは上流と同じ `0.4.45` のまま（`+` などで変えると、依存側の `^0.4` の指定との照合や勧告データベースの照合の挙動が変わるため）。見分けは**タグと SHA** で行う。
